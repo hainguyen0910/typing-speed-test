@@ -1,0 +1,95 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 120px);
+  box-sizing: border-box;
+}
+
+@media only screen and (min-height: 630px) {
+  .content {
+    padding-top: 120px;
+  }
+}
+
+.content .info-box {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-box .info {
+  margin: 1rem;
+}
+
+.info-box h2 {
+  text-align: center;
+  user-select: none;
+}
+
+.info-box h3 {
+  margin-top: 0.5em;
+  text-align: center;
+  border-top: 3px solid rgb(27, 149, 224);
+  font-size: 50px !important;
+  user-select: none;
+}
+
+.content .test-string,
+.input-string input {
+  margin: 1em 0;
+  appearance: none;
+  width: 50rem;
+  height: 3rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.336);
+  outline: none;
+  position: relative;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  padding-left: 0.5em;
+  border-radius: 10px;
+  box-shadow: 2px 0.5px 5px 2px rgba(0, 0, 0, 0.336);
+}
+
+.content .test-string {
+  padding-top: 8px;
+  overflow: hidden;
+  min-height: 3rem;
+  user-select: none;
+  background-color: #e6e3e3;
+}
+
+.content .input-string {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .input-string input {
+  background-color: #c6c6c6;
+}
+
+.input-string button {
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 300ms;
+  background-color: #fff;
+  background-image: url(./../../assets/image/restart.svg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.input-string button:hover {
+  transform: translateY(-10px);
+  background-color: #fff;
+  box-shadow: 0.2px 15px 15px rgba(0, 0, 0, 0.3);
+  transition: all 300ms;
+}

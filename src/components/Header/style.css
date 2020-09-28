@@ -1,0 +1,20 @@
+.header{
+    padding: 1rem;
+    min-height: 100px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.header img{
+    margin: 0.5em;
+    width: 80px;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+.header h1{
+    user-select: none;
+}
