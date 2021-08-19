@@ -1,22 +1,12 @@
-import {
-  Box,
-  Collapse,
-  Flex,
-  Icon,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import { AiFillGift } from "react-icons/ai";
-import { BsGearFill } from "react-icons/bs";
-import { FaClipboardCheck, FaRss } from "react-icons/fa";
-import { HiCode, HiCollection } from "react-icons/hi";
-import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
+import { FaRss } from "react-icons/fa";
+import { HiCollection } from "react-icons/hi";
+import { MdHome } from "react-icons/md";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
 
 const Sidebar = (props) => {
-  const { integrations } = props;
   return (
     <Box
       as="nav"
@@ -48,35 +38,19 @@ const Sidebar = (props) => {
       <Flex
         direction="column"
         as="nav"
-        fontSize="sm"
+        fontSize={{ base: "sm", md: "md" }}
         color="gray.600"
         aria-label="Main Navigation"
       >
-        <NavItem icon={MdHome}>Home</NavItem>
-        <NavItem icon={FaRss}>Articles</NavItem>
-        <NavItem icon={HiCollection}>Collections</NavItem>
-        <NavItem icon={FaClipboardCheck}>Checklists</NavItem>
-        <NavItem icon={HiCode} onClick={integrations.onToggle}>
-          Integrations
-          <Icon
-            as={MdKeyboardArrowRight}
-            ml="auto"
-            transform={integrations.isOpen && "rotate(90deg)"}
-          />
+        <NavItem icon={MdHome} path="/">
+          Home
         </NavItem>
-        <Collapse in={integrations.isOpen}>
-          <NavItem pl="12" py="2">
-            Shopify
-          </NavItem>
-          <NavItem pl="12" py="2">
-            Slack
-          </NavItem>
-          <NavItem pl="12" py="2">
-            Zapier
-          </NavItem>
-        </Collapse>
-        <NavItem icon={AiFillGift}>Changelog</NavItem>
-        <NavItem icon={BsGearFill}>Settings</NavItem>
+        <NavItem icon={FaRss} path="/typing-speed-test">
+          Typing speed test
+        </NavItem>
+        <NavItem icon={HiCollection} path="/text-practice">
+          Text Practice
+        </NavItem>
       </Flex>
     </Box>
   );
